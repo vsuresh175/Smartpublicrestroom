@@ -1,0 +1,36 @@
+\\markdown
+smart_restroom_app/
+    |- templates/
+        |- index.html
+    |- app.py
+\\html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Restroom App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Smart Public Restroom</h1>
+        <p>Status: {{ status }}</p>
+        <button id="occupancyButton" class="btn btn-primary">Toggle Occupancy</button>
+        <br><br>
+        <textarea id="feedback" class="form-control" placeholder="Provide feedback"></textarea>
+        <button id="feedbackButton" class="btn btn-success mt-2">Submit Feedback</button>
+    </div>
+
+    <script>
+        document.getElementById('occupancyButton').addEventListener('click', function() {
+            // Implement code to toggle occupancy status via AJAX request
+        });
+
+        document.getElementById('feedbackButton').addEventListener('click', function() {
+            var feedbackText = document.getElementById('feedback').value;
+            // Implement code to send feedback via AJAX request
+        });
+    </script>
+</body>
+</html>
